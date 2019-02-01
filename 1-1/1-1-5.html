@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>群组选择器</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    div {
+      background: red;
+    }
+    ul li {
+      width: 80px;
+      height: 80px;
+      margin-left: 10px;
+      display: inline-block;
+    }
+
+    span {
+      background: blue;
+    }
+
+    #last {
+      background: purple;
+    }
+
+    .child {
+      background: gray;
+    }
+
+    .item1, #item2 {
+      background: tomato;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <ul>
+      <li>
+        <span>first</span>
+      </li>
+      <li class="item1">2</li>
+      <li>3</li>
+      <li class="child">4</li>
+      <li class="child">5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li id="item2">9</li>
+      <li id="last">10</li>
+    </ul>
+  </div>
+</body>
+</html>

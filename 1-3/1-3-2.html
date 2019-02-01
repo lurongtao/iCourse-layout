@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>目标伪类选择器</title>
+    <style>
+        .menu {
+            color: #424242;
+            margin: 0 auto;
+            padding: 10px;
+            width: 500px;
+        }
+        .menu h2 {
+            margin: 5px 0;
+            padding: 0;
+            position: relative;
+        }
+        .menu h2 a {
+            background: #8f8f8f;
+            border-radius: 5px;
+            color: #424242;
+            display: block;
+            font-size: 13px;
+            margin: 0;
+            padding: 10px;
+            text-decoration: none;
+        }
+        .menu :target h2 a,
+        .menu h2 a:focus,
+        .menu h2 a:hover,
+        .menu h2 a:active {
+            background: #2288dd;
+            color: #fff;
+        }
+        .menu p {
+            margin: 0;
+            height: 0;
+            overflow: hidden;
+            padding: 0 10px;
+        }
+        .menu :target p {
+            height: 50px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <div class="menuSection" id="basic">
+            <h2>
+                <a href="#basic">前端开发基础</a>
+            </h2>
+            <p>HTML + CSS + JavaScript</p>
+        </div>
+        <div class="menuSection" id="tools">
+            <h2>
+                <a href="#tools">前端工程化工具</a>
+            </h2>
+            <p>Gulp + Webpck</p>
+        </div>
+        <div class="menuSection" id="framework">
+            <h2>
+                <a href="#framework">前端开发框架</a>
+            </h2>
+            <p>Vue + React + Angular</p>
+        </div>
+    </div>
+</body>
+</html>

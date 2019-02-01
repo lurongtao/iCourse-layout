@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>动态伪类选择器</title>
+    <style>
+        div {
+            text-align: center;
+        }
+        .btn {
+            background: #0074cc;
+            border: solid 1px #ccc;
+            color: #fff;
+            font-size: 20px;
+            padding: 14px 24px;
+            text-align: center;
+            text-decoration: none;
+            vertical-align: middle;
+        }
+        .btn:hover {
+            background: #0055cc;
+        }
+        .btn:active {
+            background: #004ab3;
+        }
+        .btn:focus {
+            outline: thin dotted #333;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="#" class="btn">动态伪类选择器按钮</a>
+    </div>
+</body>
+</html>

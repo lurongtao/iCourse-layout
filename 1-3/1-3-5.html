@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>结构伪类选择器</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            margin: 50px auto;
+            width: 400px;
+            list-style: none outside none;
+        }
+        ul li, ul div {
+            display: inline-block;
+            margin: 5px;
+            padding: 5px;
+            width: 50px;
+            height: 50px;
+            font: bold 30px/50px arial;
+            background: #000;
+            color: #fff;
+            border-radius: 50px;
+            text-align: center;
+        }
+
+        /* :first-child */
+        ul>li:first-child {
+            background: green;
+        }
+
+        /* :last-child */
+        ul>li:last-child {
+            background: blue;
+        }
+
+        /* :nth-child */
+        ul>li:nth-child(3) {
+            background: yellow;
+        }
+        ul>li:nth-child(n) {
+            background: orange;
+        }
+        ul>li:nth-child(2n) {
+            background: blue;
+        }
+        ul>li:nth-child(even) {
+            background: blue;
+        }
+        ul>li:nth-child(2n+1) {
+            background: blue;
+        }
+        ul>li:nth-child(2n-1) {
+            background: blue;
+        }
+        ul>li:nth-child(odd) {
+            background: blue;
+        }
+        ul>li:nth-child(n+5) {
+            background: blue;
+        }
+        ul>li:nth-child(-n+5) {
+            background: blue;
+        }
+        ul>li:nth-child(4n+1) {
+            background: blue;
+        }
+        ul>li:nth-last-child(4) {
+            background: blue;
+        }
+        ul>li:nth-last-child(even) {
+            background: blue;
+        }
+        ul>li:nth-last-child(odd) {
+            background: blue;
+        }
+        ul > li:nth-child(21) {
+            background: blue;
+        }
+
+        /* :nth-of-type */
+        ul > div:nth-of-type(2) {
+            background: blue;
+        }
+
+        /* :nth-last-of-type */
+        ul > div:nth-last-of-type(2) {
+            background: blue
+        }
+
+        /* :first-of-type */
+        ul > div:first-of-type {
+            background: blue;
+        }
+
+        /* :last-of-type */
+        ul > div:last-of-type {
+            background: blue;
+        }
+
+        /* :only-child */
+        ul > li:only-child {
+            background: blue;
+        }
+
+        /* :only-of-type */
+        ul > div:only-of-type {
+            background: blue;
+        }
+
+        /* :empty */
+        ul:empty {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+        <div>21</div>
+        <li>16</li>
+        <li>17</li>
+        <li>18</li>
+        <div>22</div>
+        <li>19</li>
+        <li>20</li>
+    </ul>
+    <ul>
+        <li>23</li>
+    </ul>
+    <ul>
+        <li>24</li>
+        <div>25</div>
+    </ul>
+    <ul>
+        <li>26</li>
+        <div>27</div>
+        <div>28</div>
+    </ul>
+    <ul></ul>
+</body>
+</html>

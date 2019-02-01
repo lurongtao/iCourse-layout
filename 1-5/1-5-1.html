@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>属性选择器</title>
+    <style>
+        ul {
+            width: 300px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            overflow: hidden;
+            margin: 20px auto;
+        }
+
+        ul li {
+            float: left;
+            display: block;
+            height: 50px;
+            width: 50px;
+            border-radius: 10px;
+            text-align: center;
+            background: #aac;
+            color: blue;
+            font: bold 20px/50px Arial;
+            margin: 5px;
+        }
+
+        li[id] {
+            background: yellow;
+        }
+
+        li[id=first] {
+            background: yellow;
+        }
+
+        li[class='item first'] {
+            background: yellow;
+        }
+
+        li[lang|=zh] {
+            background: yellow;
+        }
+
+        li[class~=item] {
+            background: yellow;
+        }
+
+        li[class*=item] {
+            background: yellow;
+        }
+
+        li[class^=item] {
+            background: yellow;
+        }
+
+        li[class$=item] {
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li id="first" class="item first">1</li>
+        <li>2</li>
+        <li lang="zh-cn">3</li>
+        <li class="item">4</li>
+        <li>5</li>
+        <li class="item item6">6</li>
+        <li>7</li>
+        <li class="eightitem">8</li>
+        <li>9</li>
+        <li id="last">10</li>
+    </ul> 
+</body>
+</html>
