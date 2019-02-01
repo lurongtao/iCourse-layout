@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UI元素状态伪类选择器</title>
+    <style>
+        /* E:checked */
+        input[type=radio] {
+            margin-right: 10px;
+            cursor: pointer;
+            font-size: 14px;
+            width: 12px;
+            height: 12px;
+            position: relative;
+        }
+        input[type=radio]:after {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            content: " ";
+            background-color: #2288dd;
+            color: #fff;
+            top: -5px;
+            border-radius: 50%;
+        }
+
+        input[type=radio]:checked:before {
+            content: "✓";
+            position: absolute;
+            top: -3px;
+            left: 5px;
+            color: #fff;
+            font-weight: 400;
+            z-index: 1;
+        }
+
+        input[type=checkbox] {
+            margin-right: 10px;
+            position: relative;
+            font-size: 14px;
+        }
+
+        input[type=checkbox]:enabled:after,
+        input[type=checkbox]:disabled:after {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            content: " ";
+            background-color: #2288dd;
+            color: #fff;
+            top: -5px;
+            left: -5px;
+            border-radius: 20%;
+        }
+
+        input[type=checkbox]:disabled:after {
+            background-color: #ccc;
+        }
+
+        input[type=checkbox]:checked:before {
+            content: "✓";
+            position: absolute;
+            top: -3px;
+            color: #fff;
+            font-weight: 400;
+            z-index: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for="">性别：
+            男<input name="gender" checked type="radio" />
+            女<input name="gender" type="radio" />
+        </label>
+        <br />
+        <label for="">年龄：
+            0-17岁 <input disabled type="checkbox" />
+            18-35岁 <input enabled type="checkbox" />
+            35岁及以上 <input type="checkbox" />
+        </label>
+    </form>
+</body>
+</html>

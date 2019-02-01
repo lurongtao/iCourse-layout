@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>否定伪类选择器</title>
+    <style>
+        /* input {
+            border: 1px solid #2277cc;
+            width: 150px;
+        } */
+        input:not([type=radio]) {
+            border: 1px solid #2277cc;
+            width: 150px;
+        }
+    </style>
+</head> 
+<body>
+    <form action="">
+        姓名：<input type="text" />
+        邮编：<input type="text" />
+        性别：<input type="radio" /> 男 <input type="radio"> 女
+    </form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>语言伪类选择器</title>
+    <style>
+        :lang(en) {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 32px;
+            quotes: '"' '"';
+        }
+        :lang(zh-cn) {
+            font-family: 宋体;
+            font-size: 16px;
+            quotes: '“' '”';
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Language pseudo-Class selector
+    </p>
+    <p lang="en"><q>Quote in English</q></p>
+    <p lang="zh-cn"><q>中文的引号</q></p>
+</body>
+</html>

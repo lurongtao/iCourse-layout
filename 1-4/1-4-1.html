@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>伪元素</title>
+    <style>
+        p {
+            width: 200px;
+        }
+        p::first-letter {
+            color: #903;
+            float: left;
+            padding: 4px 8px 0 3px;
+            font: 75px/60px Georgia;
+        }
+        p::first-line {
+            font: italic 16px/18px Georgia;
+            color: #903;
+        }
+        p::before {
+            content: 'React';
+        }
+        p::after {
+            content: '→'
+        }
+        p::selection {
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    React是什么？
+    <p>
+        可以轻松创建交互式用户界面。为应用程序中的每个状态设计简单的视图，当数据更改时，React 将高效地更新和正确的渲染组件。
+    </p>
+</body>
+</html>
